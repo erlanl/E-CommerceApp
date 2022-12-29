@@ -55,3 +55,14 @@ And Eu clico em "Cadastrar"
 Then Eu vejo na tela uma mensagem de erro indicando que algum dos campos não foi preenchido
 And Eu clico no botão de icone que indica "Remover aviso"
 And E estou no preenchimento do cadastro do produto novamente
+
+Scenario: Tentativa mal-sucedida de remoção de produto sem selecionar nenhum item
+Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
+And Estou na página "Remover Produto"
+And Eu vejo todos os itens da minha loja
+When Eu não seleciono o item da minha loja que quero remover
+And Eu clico em "Remover"
+Then Eu vejo na tela a mensagem de erro indicando que nenhum item foi selecionado
+And Eu clico no botão de icone que indica "Remover aviso"
+And Eu continuo na página "Remover Produto"
+And Eu vejo que todos os itens permanecem na loja
