@@ -45,3 +45,13 @@ And Eu clico em "Cadastrar"
 Then Eu vejo na tela uma mensagem de erro indicando que o título(nome) do produto já pertence a outro produto na minha loja
 And Eu clico em "Retornar"
 And E estou no preenchimento do cadastro do produto novamente
+
+Scenario: Tentativa mal-sucedida de cadastro de novo produto deixando algum campo em branco
+Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
+And Estou na página "Cadastrar Produto"
+And Eu vejo os campos "Nome, descrição, preço, foto, forma de pagamento, disponibilidade" vazios
+When Eu adiciono as informações "Camisa polo, Camisa polo preta esportiva com bom pano, R$80, camisa.png, Cartão, -" nos campos "Nome, descrição, preço, foto, forma de pagamento, disponibilidade"
+And Eu clico em "Cadastrar"
+Then Eu vejo na tela uma mensagem de erro indicando que algum dos campos não foi preenchido
+And Eu clico no botão de icone que indica "Remover aviso"
+And E estou no preenchimento do cadastro do produto novamente
