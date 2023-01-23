@@ -66,3 +66,4 @@ Then Eu vejo na tela a mensagem de erro indicando que nenhum item foi selecionad
 And Eu clico no botão de icone que indica "Remover aviso"
 And Eu continuo na página "Remover Produto"
 And Eu vejo que todos os itens permanecem na loja
+And Eu confirmo que os itens permanecem na loja
