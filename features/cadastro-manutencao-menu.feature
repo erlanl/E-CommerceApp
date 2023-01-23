@@ -67,3 +67,26 @@ And Eu clico no botão de icone que indica "Remover aviso"
 And Eu continuo na página "Remover Produto"
 And Eu vejo que todos os itens permanecem na loja
 And Eu confirmo que os itens permanecem na loja
+
+Scenario: Tentativa mal-sucedida de atualizar um produto deixando algum campo em branco
+Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
+And Estou na página "Minha Loja"
+And Eu clico no ícone de atualizar produto
+And Eu estou na página "Atualizar produto"
+And Eu vejo as informações "Camisa polo, Camisa polo preta esportiva com bom pano, R$80, camisa.png, Cartão, 20 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
+When Eu altero as informações dos campos "preço, disponibilidade" de "R$80, 20 unidades" para "R$100, -"
+And Eu clico em "Editar"
+Then Eu vejo na tela uma mensagem de erro indicando que algum dos campos não foi preenchido
+And Eu clico no botão de icone que indica "Remover aviso"
+And E estou no preenchimento da atualização do produto novamente
+
+Scenario: Acessando e copiando o ID único do produto
+Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
+And Estou na página "Minha Loja"
+And Eu clico no ícone que indica "Atualizar produto"
+And Eu estou na página "Atualizar produto"
+And Eu vejo as informações "Camisa regata, Camisa regata preta com pano furado, R$100, regata.png, Cartão, 40 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
+When Eu vejo "23eeb2" no campo "ID único do produto"
+And Eu no botão de icone que indica em "Copiar ID"
+Then Eu vejo na tela a confirmação de requisito "O ID foi copiado com sucesso"
+And Eu vejo que o ID foi copiado para área de transferência
