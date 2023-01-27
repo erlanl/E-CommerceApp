@@ -72,8 +72,8 @@ Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
 And Estou na página "Minha Loja"
 And Eu clico no ícone de atualizar produto
 And Eu estou na página "Atualizar produto"
-And Eu vejo as informações "Camisa polo, Camisa polo preta esportiva com bom pano, R$80, camisa.png, Cartão, 20 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
-When Eu altero as informações dos campos "preço, disponibilidade" de "R$80, 20 unidades" para "R$100, -"
+And Eu vejo as informações "Camisa regata, Camisa regata branca esportiva com bom pano, R$120, camisa_regata.png, Dinheiro, 30 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
+When Eu altero as informações dos campos "preço, disponibilidade" de "R$120, 30 unidades" para "R$80, -"
 And Eu clico em "Editar"
 Then Eu vejo na tela uma mensagem de erro indicando que algum dos campos não foi preenchido
 And Eu clico no botão de icone que indica "Remover aviso"
