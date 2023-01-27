@@ -84,7 +84,7 @@ Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
 And Estou na página "Minha Loja"
 And Eu clico no ícone que indica "Atualizar produto"
 And Eu estou na página "Atualizar produto"
-And Eu vejo as informações "Camisa polo, Camisa polo preta de algodão, R$100, camisa_polo.png, Cartão, 20 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
+And Eu vejo as informações "Moletom, Moletom cinza com capuz, R$180, moleton_ciza.png, Cartão, 3 unidades" nos campos “Nome, descrição, preço, foto, forma de pagamento, disponibilidade”
 When Eu vejo "23eeb2" no campo "ID único do produto"
 And Eu no botão de icone que indica em "Copiar ID"
 Then Eu vejo na tela a confirmação "O ID foi copiado com sucesso"
