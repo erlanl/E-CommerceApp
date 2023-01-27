@@ -79,7 +79,7 @@ Then Eu vejo na tela uma mensagem de erro indicando que algum dos campos não fo
 And Eu clico no botão de icone que indica "Remover aviso"
 And E estou no preenchimento da atualização do produto novamente
 
-Scenario: Copiando o ID único do produto
+Scenario: Copiando e obtendo o ID único do produto
 Given Estou logado como "Admin" com login "Erlan Lira" e senha "1234"
 And Estou na página "Minha Loja"
 And Eu clico no ícone que indica "Atualizar produto"
